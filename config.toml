@@ -1,9 +1,9 @@
 # set `baseurl` to your root domain
 # if you set it to "/" share icons won't work properly on production
 baseurl = "http://crags.stream/"  # Include trailing slash
-title = "Stream of crags personal blog."
+title = "Stream of crags personal blog"
 author = "Rock Climb BG"
-copyright = "Free and welcome to use and share."
+copyright = "Free and welcome to use and share"
 # canonifyurls = true
 paginate = 10
 theme = "hugo-clarity"
