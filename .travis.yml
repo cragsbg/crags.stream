@@ -1,0 +1,14 @@
+install:
+  - curl -LO https://github.com/gohugoio/hugo/releases/download/v0.75.1/hugo_0.75.1_Linux-64bit.tar.gz
+  - tar -xf hugo_0.75.1_Linux-64bit.tar.gz
+
+script:
+  - hugo
+
+deploy:
+  provider: surge
+  project: ./public/
+  skip_cleanup: true
+  domain: crags.stream
+  on:
+    branch: master
