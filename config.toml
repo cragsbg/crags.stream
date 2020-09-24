@@ -25,7 +25,7 @@ theme = "hugo-clarity"
     xhtml = false
 
 [params]
-author = "Jane Doe"
+author = "Rock Climb BG"
 twitter = "@janedoe"
 largeTwitterCard = false # set to true if you want to show a large twitter card image. The default is a small twitter card image
 introDescription = "Technologist, perpetual student, teacher, continual incremental improvement."
