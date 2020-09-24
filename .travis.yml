@@ -3,7 +3,7 @@ install:
   - tar -xf hugo_0.75.1_Linux-64bit.tar.gz
 
 script:
-  - hugo
+  - ./hugo
 
 deploy:
   provider: surge
