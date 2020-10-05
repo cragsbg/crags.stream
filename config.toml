@@ -1,12 +1,25 @@
 # set `baseurl` to your root domain
 # if you set it to "/" share icons won't work properly on production
 baseurl = "http://crags.stream/"  # Include trailing slash
-title = "Stream of crags personal blog"
-author = "Rock Climb BG"
-copyright = "Free and welcome to use and share"
+title = "Clarity"
+author = "Jane Doe"
+copyright = "Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved."
 # canonifyurls = true
 paginate = 10
 theme = "hugo-clarity"
+
+DefaultContentLanguage = "en"
+# [languages]
+# config/_default/languages.toml
+
+# [menus]
+# config/_default/menus/menu.xx.toml
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
 
 [markup]
   [markup.highlight]
@@ -25,7 +38,7 @@ theme = "hugo-clarity"
     xhtml = false
 
 [params]
-author = "Rock Climb BG"
+author = "Jane Doe"
 twitter = "@janedoe"
 largeTwitterCard = false # set to true if you want to show a large twitter card image. The default is a small twitter card image
 introDescription = "Technologist, perpetual student, teacher, continual incremental improvement."
@@ -71,3 +84,12 @@ mobileNavigation = "left" # if you prefer right change to 'right'
 
 enforceLightMode = false
 # enforceDarkMode = false
+
+# Text for the languages menu.
+languageMenuName = "🌐"
+
+# Title separator, default to |.
+# titleSeparator = "|"
+
+# Enable or disable comment globally. Default to true.
+# comment = false
