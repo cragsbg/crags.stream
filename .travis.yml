@@ -6,9 +6,10 @@ script:
   - ./hugo
 
 deploy:
-  provider: surge
-  project: ./public/
+  provider: netlify
+  dir: ./public/
+  site: NETLIFY_SITE
+  auth: NETLIFY_AUTH
   skip_cleanup: true
-  domain: crags.stream
   on:
     branch: master
