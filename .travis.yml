@@ -8,8 +8,8 @@ script:
 deploy:
   provider: netlify
   dir: ./public/
-  site: NETLIFY_SITE
-  auth: NETLIFY_AUTH
+  site: $NETLIFY_SITE
+  auth: $NETLIFY_AUTH
   skip_cleanup: true
   on:
     branch: master
