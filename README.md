@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/cragsbg/crags.stream_hugo.svg?branch=master)](https://travis-ci.com/cragsbg/crags.stream_hugo)
+[![Build Status](https://travis-ci.com/cragsbg/crags.stream.svg?branch=master)](https://travis-ci.com/cragsbg/crags.stream)
 
 # crags.stream
 
