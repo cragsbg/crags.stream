@@ -13,6 +13,7 @@ deploy:
   site: $NETLIFY_SITE
   auth: $NETLIFY_AUTH
   edge: true
+  prod: true
   skip_cleanup: true
   on:
     branch: master
