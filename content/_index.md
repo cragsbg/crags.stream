@@ -1,6 +1,6 @@
 ---
 title: ""
-featured_image: ""
+featured_image: "images/main_page_cover.jpg"
 description: ""
 ---
 Добре дошли в моя боулдър и слаклайн блог. В момента добавям първоначалното съдържание и скоро тук ще има малко повече информация.
