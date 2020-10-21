@@ -8,15 +8,6 @@ script:
   - ./hugo
 
 deploy:
-  - provider: netlify
-    dir: ./public/
-    site: $NETLIFY_SITE
-    auth: $NETLIFY_AUTH
-    edge: true
-    prod: true
-    skip_cleanup: true
-    on:
-      branch: master
 
   - provider: netlify
     dir: ./public/
