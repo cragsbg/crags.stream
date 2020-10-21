@@ -26,5 +26,4 @@ deploy:
   edge: true
   prod: false
   skip_cleanup: true
-  on:
-    branch: /^feature\/.+$/
+  if: branch =~ /^feature\/.+$/
