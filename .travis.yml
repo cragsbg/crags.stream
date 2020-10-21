@@ -17,3 +17,14 @@ deploy:
   skip_cleanup: true
   on:
     branch: master
+
+deploy:
+  provider: netlify
+  dir: ./public/
+  site: $NETLIFY_SITE
+  auth: $NETLIFY_AUTH
+  edge: true
+  prod: false
+  skip_cleanup: true
+  on:
+    branch: branch =~ /^feature\/.+$/
