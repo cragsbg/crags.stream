@@ -11,7 +11,7 @@
       {{ partial "i18nlist.html" . }}
       {{ if .Site.Menus.main }}
         <ul class="pl0 mr3">
-          {{ range .Site.Menus.main }}
+          {{ range .Site.Menus.main.ByWeight }}
           <li class="list f5 f4-ns fw4 dib pr3">
             <a class="hover-black no-underline black-70" href="{{ .URL }}" title="{{ .Name }} page">
               {{ .Name }}
