@@ -27,4 +27,4 @@ deploy:
   prod: false
   skip_cleanup: true
   on:
-    branch: branch =~ /^feature\/.+$/
+    branch: /^feature\/.+$/
