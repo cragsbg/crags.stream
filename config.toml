@@ -5,7 +5,6 @@ title = "boulder & slack блог"
 theme = "ananke"
 
 DefaultContentLanguage = "bg"
-SectionPagesMenu = "main"
 Paginate = 10
 googleAnalytics = ""
 enableRobotsTXT = true
