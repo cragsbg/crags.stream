@@ -18,4 +18,4 @@ deploy:
     skip_cleanup: true
     on:
       all_branches: true
-      condition: $TRAVIS_BRANCH =~ /^feature\/.+$/
+      condition: $TRAVIS_BRANCH = feature/make-travis-publish-feature
