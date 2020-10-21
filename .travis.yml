@@ -26,6 +26,6 @@ deploy:
   edge: true
   prod: false
   skip_cleanup: true
-  tags: true
   on:
+    tags: true
     condition: $TRAVIS_BRANCH =~ ^feature\/.+$
