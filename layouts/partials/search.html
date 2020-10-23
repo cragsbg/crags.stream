@@ -1,0 +1,16 @@
+
+<aside role="search">
+    <div class="close toggle-search">
+    </div>
+    <div class="search-wrapper">
+        <form class="search" method="get">
+            <input type="search" placeholder="search..." disabled="disabled" />
+        </form>
+    </div>
+    <ul class="search-results bg-light-yellow">
+        <li>
+        </li>
+    </ul>
+</aside>
+{{ $script := resources.Get "js/search.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $script.RelPermalink }}"></script>

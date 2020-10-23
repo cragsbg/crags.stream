@@ -3,14 +3,25 @@
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
       {{ .Content }}
     </section>
-    {{ $psa := .Paginate .Sections }}
-    <aside class="flex-ns flex-wrap justify-around mt5">
-      {{ range $psa.Pages}}
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          {{ .Render "summary" }}
-        </div>
-      {{ end }}
-    </aside>
+    {{ if .Sections }}
+      {{ $psa := .Paginate .Sections }}
+      <aside class="flex-ns flex-wrap justify-around mt5">
+        {{ range $psa.Pages}}
+          <div class="relative w-100 w-30-l mb4 bg-white">
+            {{ .Render "summary" }}
+          </div>
+        {{ end }}
+      </aside>
+    {{ else }}
+      {{ $psa := . }}
+      <aside class="flex-ns flex-wrap justify-around mt5">
+        {{ range $psa.Pages}}
+          <div class="relative w-100 w-30-l mb4 bg-light-yellow">
+            {{ .Render "summary" }}
+          </div>
+        {{ end }}
+      </aside>
+    {{ end }}
     {{ template "_internal/pagination.html" . }}
     <section>
         <ul id="all-tags">
