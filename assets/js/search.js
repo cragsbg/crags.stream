@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             "</li>";
                     }).join("");
                 } else {
-                    searchResultElement.innerHTML = "<li><p class='no-result'>No results found</p></li>";
+                    searchResultElement.innerHTML = "<li><p class='no-result'>Няма намерени резултати</p></li>";
                 }
             });
         })

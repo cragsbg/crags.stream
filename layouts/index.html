@@ -56,4 +56,15 @@
 
       </div>
   {{ end }}
+  <div class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center">
+    <ul class="pa0">
+      {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+       <li class="list" style="display: inline;">
+         <a href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">
+          {{ $name }}
+         </a>
+       </li>
+      {{ end }}
+    </ul>
+  </div>
 {{ end }}
