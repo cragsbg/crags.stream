@@ -100,6 +100,8 @@ document.addEventListener("DOMContentLoaded", function () {
                             "<a href='" + item.url + "' title='field: url'>" + mark(item.url, searchString) + "</a>" +
                             "</li>";
                     }).join("");
+                } else if (searchString == undefined || searchString.length < 2) {
+                    searchResultElement.innerHTML = "";
                 } else {
                     searchResultElement.innerHTML = "<li><p class='no-result'>Няма намерени резултати</p></li>";
                 }
