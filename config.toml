@@ -34,6 +34,7 @@ enableRobotsTXT = true
   recent_posts_number = 5
   copyright_logo_text = "Logo designed partially by brgfx/Freepik"
   copyright_logo_url = "http://www.freepik.com"
-  body_classes = "ubuntu bg-near-white"
-  post_content_classes = "ubuntu-monospace bg-near-white"
+  body_classes = "font-ubuntu bg-near-white"
+  post_content_classes = "font-ubuntu-mono bg-near-white"
   custom_css = ["css/fonts.css"]
+  web_fonts = ["https://fonts.googleapis.com/css?family=Ubuntu","https://fonts.googleapis.com/css?family=Ubuntu Mono"]
