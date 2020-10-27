@@ -21,7 +21,8 @@
     {{ end }}
 
     {{ range .Site.Params.custom_css }}
-      <link rel="stylesheet" href="{{ relURL (.) }}">
+      {{ $css := resources.Get . | resources.Minify | resources.Fingerprint }}
+      <link href="{{ $css.RelPermalink }}" rel="stylesheet">
     {{ end }}
 
     {{ block "favicon" . }}
