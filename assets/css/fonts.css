@@ -1,0 +1,9 @@
+.ubuntu {
+    font-family: 'ubuntu', serif;
+    font-style: normal;
+}
+
+.ubuntu-monospace {
+    font-family: 'ubuntu mono', serif;
+    font-style: normal;
+}
