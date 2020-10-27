@@ -32,4 +32,4 @@ other = "Задължително е да предоставите адрес н
 other = "Изпрати"
 
 [taxonomyPageList]
-other = "Below you will find pages that utilize the taxonomy term “{{ .Title }}”"
+other = "Съдържание свързано с “{{ .Title }}”"
