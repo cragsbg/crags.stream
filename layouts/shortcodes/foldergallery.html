@@ -1,0 +1,22 @@
+{{/* To create thumbnails: for i in `find . -type f ! -name "*-thumb.jpg" -name "*.jpg"`; do echo $i; if [ -f ${i%.*}-thumb.jpg ]; then continue; fi; convert $i -thumbnail 300x300 ${i%.*}-thumb.jpg; done */}}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.0/jquery.fancybox.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.0/jquery.fancybox.min.css" />
+
+<div class="gallery">
+{{ $base := .Get "src" }}
+{{ $path := print "static/" (.Get "src") }}
+
+{{ range (readDir $path) }}
+    {{- $thumbext := "-thumb" }}
+    {{- $isthumb := .Name | findRE ($thumbext | printf "%s\\.") }}<!-- is the current file a thumbnail image? -->
+    {{- $isimg := lower .Name | findRE "\\.(gif|jpg|jpeg|tiff|png|bmp)" }}<!-- is the current file an image? -->
+    {{- if and $isimg (not $isthumb) }}
+    {{- $thumb := .Name | replaceRE "(\\.)" ($thumbext | printf "%s.") }}
+        <a data-fancybox="gallery" href="/{{ $base }}/{{ .Name }}">
+            <img src="/{{ $base  }}/{{ $thumb }}">  <br/>            
+        </a>
+    {{- end }}
+{{ end }}
+</div>

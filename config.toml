@@ -36,5 +36,5 @@ enableRobotsTXT = true
   copyright_logo_url = "http://www.freepik.com"
   body_classes = "font-ubuntu bg-near-white"
   post_content_classes = "font-ubuntu-mono bg-near-white"
-  custom_css = ["css/fonts.css"]
+  custom_css = ["css/fonts.css", "css/gallery.css"]
   web_fonts = ["https://fonts.googleapis.com/css?family=Ubuntu","https://fonts.googleapis.com/css?family=Ubuntu Mono"]
