@@ -24,6 +24,8 @@
       <link href="{{ relURL (printf "%s%s" "dist/" .) }}" rel="stylesheet">
     {{ end }}
 
+    {{ block "scripts_css" . }}{{ partialCached "site-scripts-css.html" . }}{{ end }}
+
     {{ range .Site.Params.custom_css }}
       {{ $css := resources.Get . | resources.Minify | resources.Fingerprint }}
       <link href="{{ $css.RelPermalink }}" rel="stylesheet">
@@ -39,6 +41,8 @@
       <link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
       {{ end }}
     {{ end }}
+
+    {{ block "scripts" . }}{{ partialCached "site-scripts.html" . }}{{ end }}
     
     {{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/gohugoio/hugo/tree/master/tpl/tplimpl/embedded/templates */}}
     {{- template "_internal/opengraph.html" . -}}
@@ -55,6 +59,5 @@
       {{ block "main" . }}{{ end }}
     </main>
     {{ block "footer" . }}{{ partialCached "site-footer.html" . }}{{ end }}
-    {{ block "scripts" . }}{{ partialCached "site-scripts.html" . }}{{ end }}
   </body>
 </html>
