@@ -1,13 +1,13 @@
 <aside role="search">
-    <div class="close toggle-search">
-    </div>
     <div class="search-wrapper">
-        <form class="search" method="get">
-            <input type="search" placeholder="search..." disabled="disabled" />
-        </form>
+      <div class="search-input">
+        <a href="" target="_blank" hidden></a>
+        <input type="text" placeholder="потърси..">
+        <div class="autocom-box">
+          <!-- here list is inserted from javascript -->
+        </div>
+      </div>
     </div>
-    <ul class="search-results list bg-light-yellow">
-    </ul>
 </aside>
 {{ $script := resources.Get "js/search.js" | resources.Minify | resources.Fingerprint }}
 <script src="{{ $script.RelPermalink }}"></script>
